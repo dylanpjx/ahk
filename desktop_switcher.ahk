@@ -10,7 +10,7 @@ CurrentDesktop := 1      ; Desktop count is 1-indexed (Microsoft numbers them th
 LastOpenedDesktop := 1
 
 ; DLL
-hVirtualDesktopAccessor := DllCall("LoadLibrary", "Str", A_ScriptDir . "\virtual-desktop-accessor.dll", "Ptr")
+hVirtualDesktopAccessor := DllCall("LoadLibrary", "Str", A_ScriptDir . "\VirtualDesktopAccessor.dll", "Ptr")
 global IsWindowOnDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "IsWindowOnDesktopNumber", "Ptr")
 global MoveWindowToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "MoveWindowToDesktopNumber", "Ptr")
 
@@ -109,14 +109,14 @@ _switchDesktopToTarget(targetDesktop)
 
     ; Go right until we reach the desktop we want
     while(CurrentDesktop < targetDesktop) {
-        Send ^#{Right}
+        Send {LWin down}{LCtrl down}{Right down}{LWin up}{LCtrl up}{Right up}
         CurrentDesktop++
         OutputDebug, [right] target: %targetDesktop% current: %CurrentDesktop%
     }
 
     ; Go left until we reach the desktop we want
     while(CurrentDesktop > targetDesktop) {
-        Send ^#{Left}
+        Send {LWin down}{LCtrl down}{Left down}{Lwin up}{LCtrl up}{Left up}
         CurrentDesktop--
         OutputDebug, [left] target: %targetDesktop% current: %CurrentDesktop%
     }
