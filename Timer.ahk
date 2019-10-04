@@ -19,13 +19,13 @@ return
 
 ; Creates and shows the GUI
 Sub_ShowOverlay:
-    Gui, GUI_Overlay:New, +ToolWindow  +LastFound -Caption +hwndGUI_Overlay_hwnd
+    Gui , GUI_Overlay:New, +ToolWindow +AlwaysOnTop +LastFound -Caption +hwndGUI_Overlay_hwnd +E0x20
     Gui, Margin, 10, 10
     Gui, Font, s20 q4, Segoe UI Bold
     Gui, Add, Text, w200 Center vTEXT_Timer cWhite, %timeMin% Minutes `n %timeSec% Seconds
 
     Gui, Color, 000000
-    WinSet, Transparent, 200
+    WinSet, Transparent, 150
     Gui, Show, Hide, Overlay
 
     WinMove, 1720, 0 ; Change these values to move the window
