@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 toggle:=0
 
-F4::
+#`::
 toggle:=!toggle
 if toggle {
 	timerCount := 0

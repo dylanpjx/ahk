@@ -10,7 +10,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Run MusicBee/Relaunch MusicBee if minimised
 SetTitleMatchMode 2          ; Match title of windows by part of the name
 
-Home::
+#F1::
 Sleep 100
 IfWinExist, ahk_exe musicbee.exe 
 {
