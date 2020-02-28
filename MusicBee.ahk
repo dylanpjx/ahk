@@ -19,6 +19,6 @@ IfWinExist, ahk_exe musicbee.exe
 	IfWinNotActive
 		PostMessage, 0x112, 0xF120,,, ahk_exe musicbee.exe ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
 } else
-	Run, D:\AHK\MusicBee
+	Run, D:\Programming\ahk\MusicBee
 	WinActivate
 	
