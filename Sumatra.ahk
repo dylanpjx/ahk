@@ -12,8 +12,9 @@ Sleep 100
 IfWinExist, ahk_exe SumatraPDF.exe
 {
 	IfWinActive
-		PostMessage, 0x112, 0xF020,,, ahk_exe SumatraPDF.exe; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
-	
+		PostMessage, 0x112, 0xF020,,, ahk_exe SumatraPDF.exe  ; 0x112 = WM_SYSCOMMAND, 0xF030 = SC_MAXIMIZE
+	IfWinNotActive
+		PostMessage, 0x112, 0xF120,,, ahk_exe SumatraPDF.exe ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
 } else
 	Run, SumatraPDF.exe
 	WinActivate
