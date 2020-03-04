@@ -7,6 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Put in home dir
 
 #`::
+Sleep 100
 IfWinExist, ahk_exe mintty.exe
 {
 	IfWinActive
@@ -16,6 +17,5 @@ IfWinExist, ahk_exe mintty.exe
 }
 else {
 	Run, C:\Users\Dylan\AppData\Local\wsltty\bin\mintty.exe --WSL= --configdir="C:\Users\Dylan\AppData\Roaming\wsltty"
-	WinWait, ahk_exe mintty.exe
 	WinActivate, ahk_exe mintty.exe
 }
