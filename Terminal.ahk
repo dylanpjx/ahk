@@ -11,9 +11,9 @@ Sleep 100
 IfWinExist, ahk_exe mintty.exe
 {
 	IfWinActive
-		PostMessage, 0x112, 0xF020,,, ahk_exe mintty.exe  ; 0x112 = WM_SYSCOMMAND, 0xF030 = SC_MAXIMIZE
+		PostMessage, 0x112, 0xF020,,, ahk_exe mintty.exe  ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
 	IfWinNotActive
-		PostMessage, 0x112, 0xF120,,, ahk_exe mintty.exe ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
+		WinActivate
 }
 else {
 	Run, C:\Users\Dylan\AppData\Local\wsltty\bin\mintty.exe --WSL= --configdir="C:\Users\Dylan\AppData\Roaming\wsltty"

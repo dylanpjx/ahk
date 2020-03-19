@@ -15,9 +15,9 @@ Sleep 100
 IfWinExist, ahk_exe musicbee.exe 
 {
 	IfWinActive
-		PostMessage, 0x112, 0xF020,,, ahk_exe musicbee.exe  ; 0x112 = WM_SYSCOMMAND, 0xF030 = SC_MAXIMIZE
+		PostMessage, 0x112, 0xF020,,, ahk_exe musicbee.exe ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
 	IfWinNotActive
-		PostMessage, 0x112, 0xF120,,, ahk_exe musicbee.exe ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
+		WinActivate
 } else
 	Run, D:\Programming\ahk\MusicBee
 	WinActivate
