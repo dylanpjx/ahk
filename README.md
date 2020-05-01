@@ -1,4 +1,4 @@
-# AHK
+# ahk
 <h2>Personal AHK scripts and configs.</h2>
 <hr>
 <table>
