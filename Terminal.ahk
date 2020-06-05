@@ -8,14 +8,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #`::
 Sleep 100
-IfWinExist, ahk_exe mintty.exe
+IfWinExist, ahk_exe WindowsTerminal.exe
 {
 	IfWinActive
-		PostMessage, 0x112, 0xF020,,, ahk_exe mintty.exe  ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
+		PostMessage, 0x112, 0xF020,,, ahk_exe WindowsTerminal.exe  ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
 	IfWinNotActive
 		WinActivate
 }
 else {
-	Run, C:\Users\Dylan\AppData\Local\wsltty\bin\mintty.exe --WSL= --configdir="C:\Users\Dylan\AppData\Roaming\wsltty"
-	WinActivate, ahk_exe mintty.exe
+	Run, "C:\Users\Dylan\AppData\Local\Microsoft\WindowsApps\wt.exe"
+	WinActivate, ahk_exe WindowsTerminal.exe
 }
