@@ -8,5 +8,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #`::
 Run, "C:\Users\Dylan\AppData\Local\Microsoft\WindowsApps\wt.exe"
-Sleep 100
+Sleep 300
 WinActivate
