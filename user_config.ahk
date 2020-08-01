@@ -21,11 +21,11 @@
 ; === END OF INSTRUCTIONS ===
 ; ===========================
 
-#^1::switchDesktopByNumber(1)
-#^2::switchDesktopByNumber(2)
-#^3::switchDesktopByNumber(3)
-#^4::switchDesktopByNumber(4)
-#^5::switchDesktopByNumber(5)
+!1::switchDesktopByNumber(1)
+!2::switchDesktopByNumber(2)
+!3::switchDesktopByNumber(3)
+!4::switchDesktopByNumber(4)
+!5::switchDesktopByNumber(5)
 #^6::switchDesktopByNumber(6)
 #^7::switchDesktopByNumber(7)
 #^8::switchDesktopByNumber(8)
@@ -38,11 +38,11 @@
 #^c::createVirtualDesktop()
 #^d::deleteVirtualDesktop()
 
-!1::MoveCurrentWindowToDesktop(1)
-!2::MoveCurrentWindowToDesktop(2)
-!3::MoveCurrentWindowToDesktop(3)
-!4::MoveCurrentWindowToDesktop(4)
-!5::MoveCurrentWindowToDesktop(5)
+^!1::MoveCurrentWindowToDesktop(1)
+^!2::MoveCurrentWindowToDesktop(2)
+^!3::MoveCurrentWindowToDesktop(3)
+^!4::MoveCurrentWindowToDesktop(4)
+^!5::MoveCurrentWindowToDesktop(5)
 #^y::MoveCurrentWindowToDesktop(6)
 #^u::MoveCurrentWindowToDesktop(7)
 #^i::MoveCurrentWindowToDesktop(8)
