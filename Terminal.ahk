@@ -7,15 +7,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Put in home dir
 
 #`::
+Run, "C:\Users\Dylan\AppData\Local\Microsoft\WindowsApps\wt.exe"
 Sleep 100
-IfWinExist, ahk_exe WindowsTerminal.exe
-{
-	IfWinActive
-		PostMessage, 0x112, 0xF020,,, ahk_exe WindowsTerminal.exe  ; 0x112 = WM_SYSCOMMAND, 0xF020 = SC_MINIMIZE
-	IfWinNotActive
-		WinActivate
-}
-else {
-	Run, "C:\Users\Dylan\AppData\Local\Microsoft\WindowsApps\wt.exe"
-	WinActivate, ahk_exe WindowsTerminal.exe
-}
+WinActivate
