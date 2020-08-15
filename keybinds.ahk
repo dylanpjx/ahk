@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Run Sumatra/Relaunch Sumatra if minimised
 
-#F2::
+#w::
 Sleep 100
 IfWinExist, ahk_exe SumatraPDF.exe
 {
@@ -47,7 +47,8 @@ WinActivate
 return
 
 ; Run Discord
-#w::
+#F2::
 Run, "C:\Users\Dylan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord"
 WinActivate
 return
+
